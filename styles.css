@@ -132,15 +132,24 @@ a {
   flex: 0 0 auto;
 }
 
-.brand img {
-  width: 88px;
-  height: 52px;
-  object-fit: cover;
-  object-position: center 61%;
-  transition: transform var(--transition);
+.wordmark {
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  text-decoration: none;
 }
 
-.brand:hover img {
+.brand.wordmark {
+  padding: 0.75rem 0;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.brand.wordmark:hover {
+  color: var(--blue);
+  text-decoration: none;
   transform: scale(1.025);
 }
 
@@ -321,18 +330,21 @@ p {
 
 .hero {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   padding: 3.75rem 0 5.5rem;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(3, 27, 61, 0.9), rgba(3, 27, 61, 0.68)),
+    url("assets/images/hero-image.png") center / cover no-repeat,
+    var(--navy);
 }
 
 .hero::before {
   position: absolute;
   z-index: -1;
-  top: -20rem;
-  right: -22rem;
-  width: 42rem;
-  height: 42rem;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.12), rgba(37, 99, 235, 0) 68%);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 27, 61, 0.08), rgba(3, 27, 61, 0.3));
   content: "";
 }
 
@@ -367,10 +379,12 @@ p {
 
 .hero-copy > .eyebrow {
   margin-bottom: 1.25rem;
+  color: #a9c6ff;
 }
 
 .hero-copy h1 {
   max-width: 1080px;
+  color: var(--white);
   font-size: clamp(3.25rem, 10vw, 6.45rem);
   line-height: 0.98;
   letter-spacing: -0.058em;
@@ -379,7 +393,7 @@ p {
 .hero-lede {
   max-width: 680px;
   margin-top: 1.75rem;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.9);
   font-size: clamp(1.08rem, 2.4vw, 1.38rem);
   line-height: 1.65;
 }
@@ -827,6 +841,10 @@ blockquote {
   transform: scale(1.025);
 }
 
+.event-card-image-featured {
+  box-shadow: 0 14px 30px rgba(3, 27, 61, 0.18);
+}
+
 .card-label {
   margin-bottom: 0.6rem;
   color: var(--blue);
@@ -868,6 +886,17 @@ blockquote {
   display: grid;
   gap: 2rem;
   align-items: center;
+}
+
+.registration-form-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.registration-form-grid .registration-image {
+  margin-top: 0;
+  box-shadow: var(--shadow);
 }
 
 .registration-intro > div {
@@ -1157,7 +1186,7 @@ blockquote {
   color: #c8d5e8;
   background:
     linear-gradient(rgba(3, 27, 61, 0.74), rgba(3, 27, 61, 0.86)),
-    url("assets/images/Footer Background.png") center 62% / cover no-repeat,
+    url("assets/images/footer-background.png") center 62% / cover no-repeat,
     var(--navy);
 }
 
@@ -1169,12 +1198,10 @@ blockquote {
 
 .footer-brand {
   position: relative;
-  width: 90px;
-  display: block;
-  padding: 0.25rem;
-  background: var(--white);
-  border-radius: var(--radius-sm);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 0.7rem 0;
+  color: var(--white);
+  font-size: 1.5rem;
   transition: transform var(--transition);
 }
 
@@ -1192,13 +1219,6 @@ blockquote {
   color: var(--white);
   background: var(--blue);
   border-radius: 50%;
-}
-
-.footer-brand img {
-  width: 100%;
-  height: 48px;
-  object-fit: cover;
-  object-position: center 61%;
 }
 
 .site-footer p {
@@ -1252,8 +1272,7 @@ blockquote {
   }
 
   .registration-intro {
-    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-    gap: 3rem;
+    grid-template-columns: 1fr;
   }
 
   .registration-benefits {
@@ -1287,9 +1306,8 @@ blockquote {
     min-height: 5.5rem;
   }
 
-  .brand img {
-    width: 104px;
-    height: 60px;
+  .brand.wordmark {
+    font-size: 1.6rem;
   }
 
   .menu-toggle {
@@ -1396,6 +1414,16 @@ blockquote {
 
   .registration-benefits {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .registration-form-grid {
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(2rem, 4vw, 4rem);
+  }
+
+  .registration-form-grid .registration-image {
+    position: sticky;
+    top: 7rem;
   }
 
   .pillar:last-child {

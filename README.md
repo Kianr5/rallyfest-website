@@ -1,21 +1,22 @@
-# Rally Sports Website
+# RallyFest Website
 
-Official website for **Rally Sports** and the **RallyFest** pilot event.
+Official website for **RallyFest**, the festival-style 3v3 soccer event owned
+and operated by **Rostami Group LLC**.
 
 ------------------------------------------------------------------------
 
 ## Project Overview
 
-This repository contains the source code and assets for the Rally Sports
+This repository contains the source code and assets for the official RallyFest
 website.
 
 The website will:
 
--   Introduce Rally Sports
--   Showcase RallyFest
+-   Present RallyFest as the primary public-facing brand
+-   Showcase the RallyFest experience and Seattle-area pilot
 -   Collect pilot registrations
 -   Provide sponsor information
--   Serve as the official online presence for Rally Sports
+-   Serve as the official online presence for RallyFest
 
 ------------------------------------------------------------------------
 
@@ -34,9 +35,9 @@ No backend or database is used for the initial MVP.
 ## Project Structure
 
 ``` text
-rally-sports-website/
+rallyfest-website/
 ├── README.md
-├── website-content.md
+├── company-overview.md
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -51,15 +52,16 @@ rally-sports-website/
 
 ## Source of Truth
 
-All business information, branding, website copy, and design decisions
-are maintained in:
+`company-overview.md` is the source of truth for the legal company structure,
+corporate ownership, and relationship between RallyFest and Rostami Group LLC:
 
 ``` text
-website-content.md
+company-overview.md
 ```
 
-When building or updating the website, use this file as the primary
-reference.
+The customer-facing website remains focused on RallyFest. Rostami Group LLC is
+identified only where formal ownership, legal, privacy, registration, contact,
+or business-entity language requires it.
 
 ------------------------------------------------------------------------
 
@@ -79,7 +81,7 @@ The website should be:
 
 ## Development Workflow
 
-1.  Update `website-content.md` when business information changes.
+1.  Update `company-overview.md` when corporate information changes.
 2.  Use Codex to generate or modify website code.
 3.  Review changes.
 4.  Commit changes to GitHub.
@@ -89,7 +91,7 @@ The website should be:
 
 ## Status
 
-**Current Phase:** Planning & Initial Website Development
+**Current Phase:** RallyFest pilot pre-registration
 
-The website has not yet been generated. This repository currently
-contains planning documents, branding assets, and project structure.
+The website is a static HTML/CSS/JavaScript site hosted with GitHub Pages. Its
+pre-registration flow uses an embedded Tally form.
