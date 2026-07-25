@@ -8,6 +8,9 @@
   <meta property="og:title" content="RallyFest | Festival-Style 3v3 Soccer">
   <meta property="og:description" content="Competition, community, and culture come together at RallyFest, a festival-style 3v3 soccer event launching in the Seattle area.">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RallyFest | Festival-Style 3v3 Soccer">
+  <meta name="twitter:description" content="Competition, community, and culture come together at RallyFest, a festival-style 3v3 soccer event launching in the Seattle area.">
   <!-- Add og:url and og:image when the production URL and social preview are available. -->
   <title>RallyFest | Festival-Style 3v3 Soccer</title>
   <link rel="icon" href="assets/logos/rally-sports-logo.png" type="image/png">
@@ -15,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260724b">
+  <script src="script.js?v=20260724b" defer></script>
 </head>
 <body>
   <svg class="icon-sprite" aria-hidden="true">
@@ -51,33 +54,34 @@
 
   <header class="site-header" data-header>
     <nav class="nav container" aria-label="Main navigation">
-      <!-- Replace this temporary wordmark with the final RallyFest logo when it is available. -->
-      <a class="brand wordmark" href="#top" aria-label="RallyFest home">
-        RallyFest
+      <a class="brand" href="#top" aria-label="RallyFest home">
+        <img src="assets/logos/rally-sports-logo.png" width="1254" height="1254" alt="RallyFest" decoding="async">
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
         <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"></use></svg>
         <svg class="icon icon-close" aria-hidden="true"><use href="#icon-x"></use></svg>
       </button>
       <div class="nav-links" id="nav-links">
-        <a href="#about">RallyFest</a>
-        <a href="#rallyfest">Experience</a>
-        <a href="#event">Pilot Event</a>
-        <a href="#sponsors">Sponsors</a>
-        <a href="#faq">FAQ</a>
-        <a class="button button-small" href="#registration">Register <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+        <a href="#about" data-nav-link>RallyFest</a>
+        <a href="#rallyfest" data-nav-link>Experience</a>
+        <a href="#event" data-nav-link>Pilot Event</a>
+        <a href="#sponsors" data-nav-link>Sponsors</a>
+        <a href="#faq" data-nav-link>FAQ</a>
+        <a class="button button-small" href="#registration" data-nav-link>Register <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/images/hero-image.png" width="2098" height="749" alt="RallyFest — Play Together. Build Traditions. Competition brings us together. Community brings us back." fetchpriority="high" decoding="async">
       <div class="hero-grid container">
         <div class="hero-copy reveal">
-          <p class="hero-event-label">RallyFest · Seattle-area pilot</p>
-          <p class="eyebrow">Competition · Community · Culture</p>
-          <h1 id="hero-title">Festival-style 3v3 soccer starts here.</h1>
-          <p class="hero-lede">RallyFest brings competition, community, and culture together in one unforgettable soccer festival.</p>
+          <div>
+            <p class="hero-event-label">RallyFest · Seattle-area pilot</p>
+            <h1 class="visually-hidden" id="hero-title">Festival-style 3v3 soccer starts here.</h1>
+            <p class="hero-lede">RallyFest brings competition, community, and culture together in one unforgettable soccer festival.</p>
+          </div>
           <div class="button-row">
             <a class="button hero-primary" href="#registration">Register for the Pilot <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
             <a class="button button-secondary hero-secondary" href="#rallyfest">Learn More</a>
@@ -293,6 +297,10 @@
           </script>
           </div>
         </div>
+        <p class="tally-fallback reveal">
+          Having trouble with the embedded form?
+          <a href="https://tally.so/r/BzVgy7" target="_blank" rel="noopener noreferrer">Open RallyFest pre-registration in a new tab</a>.
+        </p>
 
         <p class="registration-privacy reveal">
           <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"></use></svg>
@@ -328,23 +336,23 @@
           <h2 id="faq-title">Questions, answered soon.</h2>
           <p>Additional RallyFest Pilot details and frequently asked questions are Coming Soon.</p>
         </div>
-        <div class="faq-list reveal">
-          <details>
-            <summary><span>When and where is the RallyFest Pilot?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></summary>
-            <p>September 19–20, 2026 (Tentative), in the Seattle Area. Venue: Coming Soon.</p>
-          </details>
-          <details>
-            <summary><span>What is the tournament format?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></summary>
-            <p>RallyFest is a two-day 3v3 soccer tournament. Teams may have a minimum of three and a maximum of five players.</p>
-          </details>
-          <details>
-            <summary><span>Which divisions are planned?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></summary>
-            <p>Men’s Open, Women’s Open, and Co-Ed Open. Final divisions are subject to registration numbers.</p>
-          </details>
-          <details>
-            <summary><span>How much does it cost to enter?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></summary>
-            <p>Entry fee: Coming Soon. Registration deadline: Coming Soon.</p>
-          </details>
+        <div class="faq-list reveal" data-faq-list>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-date" id="faq-question-date"><span>When and where is the RallyFest Pilot?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></button>
+            <div class="faq-answer" id="faq-answer-date" role="region" aria-labelledby="faq-question-date"><p>September 19–20, 2026 (Tentative), in the Seattle Area. Venue: Coming Soon.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-format" id="faq-question-format"><span>What is the tournament format?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></button>
+            <div class="faq-answer" id="faq-answer-format" role="region" aria-labelledby="faq-question-format"><p>RallyFest is a two-day 3v3 soccer tournament. Teams may have a minimum of three and a maximum of five players.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-divisions" id="faq-question-divisions"><span>Which divisions are planned?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></button>
+            <div class="faq-answer" id="faq-answer-divisions" role="region" aria-labelledby="faq-question-divisions"><p>Men’s Open, Women’s Open, and Co-Ed Open. Final divisions are subject to registration numbers.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-cost" id="faq-question-cost"><span>How much does it cost to enter?</span><span class="faq-icons" aria-hidden="true"><svg class="icon icon-plus"><use href="#icon-plus"></use></svg><svg class="icon icon-minus"><use href="#icon-minus"></use></svg></span></button>
+            <div class="faq-answer" id="faq-answer-cost" role="region" aria-labelledby="faq-question-cost"><p>Entry fee: Coming Soon. Registration deadline: Coming Soon.</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -369,9 +377,8 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <!-- Replace this temporary wordmark with the final RallyFest logo when it is available. -->
-      <a class="footer-brand wordmark" href="#top" aria-label="RallyFest — back to top">
-        RallyFest
+      <a class="footer-brand" href="#top" aria-label="RallyFest — back to top">
+        <img src="assets/logos/rally-sports-logo.png" width="1254" height="1254" alt="RallyFest" loading="lazy" decoding="async">
         <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
       </a>
       <p>Competition brings us together. Community brings us back.</p>
